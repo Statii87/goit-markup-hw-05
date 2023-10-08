@@ -13,12 +13,21 @@
     <title>Web Studio</title>
   </head>
   <body>
+    <div class="modal is-hidden" data-modal>
+      <div class="modal-inner">
+        <div class="close-modal close-bg-modal" data-modal-close>
+          <svg class="close-modal-icon">
+            <use href="./images/svg/close-modal.svg#icon-close-modal"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <section class="header-section container">
         <a href="index.html" class="logo">Web<spam class="logo-header">Studio</spam></a>
         <nav class="nav-link">
           <ul class="nav-link-list">
-            <li><a href="index.html" class="nav-link-item current">Studio</a></li>
+            <li class="nav-link-list-item"><a href="index.html" class="nav-link-item current after-link">Studio</a></li>
             <li><a href="portfolio.html" class="nav-link-item">Portfolio</a></li>
             <li><a href="#" class="nav-link-item">Contacts</a></li>
           </ul>
@@ -49,7 +58,7 @@
             <h1 class="hero-title">EFFECTIVE SOLUTIONS FOR <br> YOUR BUSINESS</h1>
           </div>
           <div>
-            <button type="button" class="hero-button">Request our service</button>
+            <button type="button" class="hero-button" data-modal-open>Request our service</button>
           </div>
         </div>
       </section>
@@ -110,9 +119,21 @@
       <section class="what-we-do-section container">
         <h2 class="description-section">What we do</h2>
         <ul class="description-img">
-          <li><img src="images/img.jpg" alt="laptop" width="370" /></li>
-          <li><img src="images/img1.jpg" alt="telefon" width="370" /></li>
-          <li><img src="images/img2.jpg" alt="tableta" width="370" /></li>
+          <li><img src="images/img.jpg" alt="laptop" width="370" />
+            <div class="overlay-img">
+              <p>DESKTOP APPS</p>
+            </div>
+          </li>
+          <li><img src="images/img1.jpg" alt="telefon" width="370" />
+            <div class="overlay-img">
+              <p>Mobile APPS</p>
+            </div>
+          </li>
+          <li><img src="images/img2.jpg" alt="tableta" width="370" />
+            <div class="overlay-img">
+              <p>DESIGN SOLUTIONS</p>
+            </div>
+          </li>
         </ul>
       </section>
       <section class="team-section">
@@ -356,5 +377,6 @@
               </ul>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
